@@ -11,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.jyotimoykashyap.meditationapp.ui.HomeScreen
 import com.jyotimoykashyap.meditationapp.ui.theme.MeditationAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,29 +19,18 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MeditationAppTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
+                HomeScreen()
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Box(
-        modifier = Modifier.fillMaxSize()
-    ){
-        Text(text = "Hello $name!")
-    }
 
-}
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     MeditationAppTheme {
-        Greeting("Android")
+        HomeScreen()
     }
 }
